@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 '''
-HexDecimalmBinary0to15.py
+HexadecimalAndBinaryBingo16to31.py
 
 for use with bingo cards
 
@@ -19,7 +19,7 @@ from time import sleep
 #CONSTANTS
 MIN_ASCII_VALUE = 97 
 MAX_ASCII_VALUE = 122
-WINDOW_WIDTH = 700
+WINDOW_WIDTH = 1600
 WINDOW_HEIGHT = 800
 
 BACKGROUND_COLOR=(90,30,90)
@@ -41,7 +41,7 @@ line3 = 'press y to start a new game press q to close the game'
 
 def main():
     screen=pygame.display.set_mode((WINDOW_WIDTH,WINDOW_HEIGHT))
-    pygame.display.set_caption('Bingo Selector for Hexidecimal and Binary')
+    pygame.display.set_caption('Bingo Selector for Hexadecimal and Binary 16 to 31')
     screen.fill(BACKGROUND_COLOR)
     display_message(screen, line1, FOREGROUND_COLOR, (150, 100))
     display_message(screen, line2, FOREGROUND_COLOR, (150, 140))
@@ -62,9 +62,7 @@ def main():
                 elif letter.lower() == 'y':
                     how = False
                     choicesDone = []
-                    choices = ['0000', '0001', '0010', '0011', '0100', '0101', '0110', '0111', '1000', '1001', '1010', '1011', '1100',
-    '1101', '1110', '1111', 'Ox0', 'Ox1', 'Ox2', 'Ox3', 'Ox4', 'Ox5', 'Ox6', 'Ox7', 'Ox8', 'Ox9', 'OxA', 'OxB', 'OxC',
-    'OxD', 'OxE', 'OxF']
+                    choices = ['0b10000', '0b10001', '0b10010', '0b10011', '0b10100', '0b10101', '0b10110', '0b10111', '0b11000', '0b11001', '0b11010', '0b11011', '0b11100', '0b11101', '0b11110', '0b11111', 'Ox10', 'Ox11', 'Ox12', 'Ox13', 'Ox14', 'Ox15', 'Ox16', 'Ox17', 'Ox18', 'Ox19', 'Ox1a', 'Ox1b', 'Ox1c', 'Ox1d', 'Ox1e', 'Ox1f']
                     #print(choices)
                     #print(choicesDone)
                     main()
@@ -171,9 +169,7 @@ def generate_choice():
         return number
     else:
         choicesDone = []
-        choices = ['0000', '0001', '0010', '0011', '0100', '0101', '0110', '0111', '1000', '1001', '1010', '1011', '1100',
-    '1101', '1110', '1111', 'Ox0', 'Ox1', 'Ox2', 'Ox3', 'Ox4', 'Ox5', 'Ox6', 'Ox7', 'Ox8', 'Ox9', 'OxA', 'OxB', 'OxC',
-    'OxD', 'OxE', 'OxF']
+        choices = ['0b10000', '0b10001', '0b10010', '0b10011', '0b10100', '0b10101', '0b10110', '0b10111', '0b11000', '0b11001', '0b11010', '0b11011', '0b11100', '0b11101', '0b11110', '0b11111', 'Ox10', 'Ox11', 'Ox12', 'Ox13', 'Ox14', 'Ox15', 'Ox16', 'Ox17', 'Ox18', 'Ox19', 'Ox1a', 'Ox1b', 'Ox1c', 'Ox1d', 'Ox1e', 'Ox1f']
         numberBig = random.randint(0, 12345)
         number = choices[numberBig % len(choices)]
         numberW = numberBig % len(choices)
