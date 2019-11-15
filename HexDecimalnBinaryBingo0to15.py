@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 '''
-HexDecimalmBinary0to15.py
+HexadecimalAndBinaryBingo0to15.py
 
 for use with bingo cards
 
@@ -13,7 +13,6 @@ for use with bingo cards
 import sys
 import random
 import pygame
-from tkinter import messagebox
 from time import sleep
 
 #CONSTANTS
@@ -43,7 +42,7 @@ line3 = 'press y to start a new game press q to close the game'
 
 def main():
     screen=pygame.display.set_mode((WINDOW_WIDTH,WINDOW_HEIGHT))
-    pygame.display.set_caption('Bingo Selector for Hexidecimal and Binary')
+    pygame.display.set_caption('Bingo Selector for Hexadecimal and Binary 0 to 15')
     screen.fill(BACKGROUND_COLOR)
     display_message(screen, line1, FOREGROUND_COLOR, (150, 100))
     display_message(screen, line2, FOREGROUND_COLOR, (150, 140))
